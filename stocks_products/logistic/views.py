@@ -13,7 +13,7 @@ class ProductViewSet(ModelViewSet):
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
 
     filterset_fields = ['title', 'description']
-    search_fields = ['id', 'title', 'description']
+    search_fields = ['title', 'description']
     ordering_fields = ['title', 'description']
     pagination_class = PageNumberPagination
 
@@ -25,6 +25,6 @@ class StockViewSet(ModelViewSet):
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
 
     filterset_fields = ['address']
-    search_fields = ['id']
+    search_fields = ['products']
     ordering_fields = ['address']
     pagination_class = PageNumberPagination
